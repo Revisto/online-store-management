@@ -1,0 +1,21 @@
+[
+    {
+        "id": 422,
+        "customer_id": 948,
+        "products": [
+            "288",
+            "247"
+        ],
+        "total_price": 5.0,
+        "status": "done"
+    },
+    {
+        "id": 823,
+        "customer_id": 948,
+        "products": [
+            "247"
+        ],
+        "total_price": 4.0,
+        "status": "done"
+    }
+]

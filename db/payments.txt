@@ -1,0 +1,23 @@
+[
+    {
+        "id": 847,
+        "customer_id": 948,
+        "amount": 5.0,
+        "method": "card",
+        "status": "done"
+    },
+    {
+        "id": 995,
+        "customer_id": 948,
+        "amount": 5.0,
+        "method": "card",
+        "status": "done"
+    },
+    {
+        "id": 762,
+        "customer_id": 948,
+        "amount": 4.0,
+        "method": "cash",
+        "status": "done"
+    }
+]

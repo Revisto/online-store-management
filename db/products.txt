@@ -1,0 +1,28 @@
+[
+    {
+        "id": 282,
+        "name": "Sib",
+        "price": 1.0,
+        "categories": [
+            "fruit",
+            " veg"
+        ]
+    },
+    {
+        "id": 247,
+        "name": "table",
+        "price": 4.0,
+        "categories": [
+            "wood",
+            " home"
+        ]
+    },
+    {
+        "id": 288,
+        "name": "banana",
+        "price": 1.0,
+        "categories": [
+            "fruit"
+        ]
+    }
+]
