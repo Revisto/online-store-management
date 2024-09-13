@@ -1,7 +1,7 @@
-from random import randint
 
 from models.payment import Payment
 from utils.file_handler import FileHandler
+import secrets
 
 class PaymentService:
     def __init__(self):
@@ -17,7 +17,7 @@ class PaymentService:
         self.file_handler.write(data)
 
     def add_payment(self, customer, amount, method):
-        payment_id = randint(1, 999)
+        payment_id = secrets.SystemRandom().randint(1, 999)
         payment = Payment(payment_id, customer.id, amount, method, "done")
         self.payments.append(payment)
         self.save_payments()
