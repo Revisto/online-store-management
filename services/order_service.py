@@ -1,7 +1,7 @@
-from random import randint
 
 from models.order import Order
 from utils.file_handler import FileHandler
+import secrets
 
 class OrderService:
     def __init__(self):
@@ -17,7 +17,7 @@ class OrderService:
         self.file_handler.write(data)
 
     def place_order(self, customer, total_price):
-        order_id = randint(1, 999)
+        order_id = secrets.SystemRandom().randint(1, 999)
         order = Order(order_id, customer.id, customer.cart, total_price, "done")
         self.orders.append(order)
         self.save_orders()

@@ -1,9 +1,9 @@
-from random import randint
 
 from models.customer import Customer
 from services.product_service import ProductService
 from services.order_service import OrderService
 from services.base_service import BaseService
+import secrets
 
 class CustomerService(BaseService):
     def __init__(self):
@@ -19,7 +19,7 @@ class CustomerService(BaseService):
         self.file_handler.write(data)
 
     def add_customer(self, name, cart=[]):
-        customer_id = randint(1, 999)
+        customer_id = secrets.SystemRandom().randint(1, 999)
         customer = Customer(customer_id, name, cart)
         self.customers.append(customer)
         self.save_customers()
