@@ -6,13 +6,16 @@ class UI:
         self.payment_service = payment_service
 
     def start(self):
-        user_type = input("Are you a superadmin or a customer? ")
-        if user_type.lower()[0] == "s":
+        print("Are you a superadmin or a customer? ")
+        print("1. Superadmin")
+        print("2. Customer")
+        user_type = input("Choose an option: ")
+        if user_type.lower() == "1":
             self.superadmin_interface()
-        elif user_type.lower()[0] == "c":
+        elif user_type.lower() == "2":
             self.customer_interface()
         else:
-            print("Invalid user type. Please enter either 'superadmin' or 'customer'.")
+            print("Invalid choice. Please choose a number between 1 and 2.")
 
     def superadmin_interface(self):
         while True:
