@@ -1,7 +1,7 @@
-from random import randint
 
 from models.product import Product
 from utils.file_handler import FileHandler
+import secrets
 
 class ProductService:
     def __init__(self):
@@ -17,7 +17,7 @@ class ProductService:
         self.file_handler.write(data)
 
     def add_product(self, name, price, categories):
-        product = Product(randint(1, 999), name, price, categories)
+        product = Product(secrets.SystemRandom().randint(1, 999), name, price, categories)
         self.products.append(product)
         self.save_products()
 
